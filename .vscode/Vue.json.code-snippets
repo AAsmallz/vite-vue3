@@ -1,0 +1,19 @@
+{
+	"Print to console": {
+		"prefix": "vue3-template",
+		"body": [
+			"<template>",
+			"  <div></div>",
+			"</template>",
+			"",
+			"<script setup>",
+			"import { computed, onMounted, ref, watch } from 'vue';",
+			"const props = defineProps({",
+			"});",
+			"</script>",
+			"<style lang=\"scss\" scoped>",
+			"</style>"
+		],
+		"description": "A vue3+vite file template"
+	}
+}
