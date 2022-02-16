@@ -1,7 +1,14 @@
 .box-card {
-  .box-form {
-    .box-btn {
+  width: 500px; 
+  border-radius: 12px; 
+  margin: 150px auto;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  .box-btn{
+    ::v-deep(.el-form-item__content){
+      margin-left: 0 !important;
       text-align: center;
     }
   }
 }
+
+

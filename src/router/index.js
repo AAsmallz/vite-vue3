@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
+import { getToken } from '../utils/auth';
 
 import layout from '../components/layout.vue';
 import Home from '../pages/home.vue';
@@ -33,6 +34,17 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+});
+router.beforeEach((to, form, next) => {
+  let token = getToken();
+  const { fullPath } = to;
+  if (fullPath === '/login') {
+    next();
+  }
+  if (!token) {
+    next('/login');
+  }
+  next();
 });
 
 export default router;
